@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh; 
+    width: 100%;
+    background-color:hsl(234, 29%, 20%) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+} 
+main{
+    height: 550px;
+    width: 755px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    display: flex;
+}
+
+  
+
+.info-container{
+    height: 93%;
+    width: 50%;
+    padding-top: 4.8rem;
+    padding-bottom: 2.8rem;
+    padding-left: 3rem;
+    padding-right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h1{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color:  hsl(235, 18%, 26%);
+}
+.p-1{
+    font-size: 0.8rem;
+    color:  hsl(235, 18%, 26%);
+   
+}
+.benefit{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color:  hsl(235, 18%, 26%);
+}
+.p-2{
+    margin-left: 15px;
+    font-weight: 400;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+input{
+    height:40px ;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 6px;
+}
+input:hover{
+    cursor: pointer;
+}
+.label-error{
+    display:flex;
+    justify-content: space-between;
+}  
+.error{
+    font-size: 0.7rem;
+    margin-top: 25px;
+    color: red;
+}
+button{
+    height: 40px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color:hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%) ;
+    font-weight: 700;
+}
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    cursor: pointer;
+    box-shadow: -5px 21px 17px -14px rgba(77,30,30,0.75);
+    -webkit-box-shadow: -5px 21px 17px -14px rgba(77,30,30,0.75);
+    -moz-box-shadow: -5px 21px 17px -14px rgba(77,30,30,0.75);
+}
+.img-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ilustration{
+    width: 100%;
+    height: 100%;
+    padding: 1rem; 
+}
+
+
+
+.message-container{
+    display:none;
+    background-color:hsl(234, 29%, 20%) ;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: 1;
+}
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 20rem;
+    height: 21rem;
+    padding-inline: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+h2{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: hsl(235, 18%, 26%);
+}
+.paragraph-message{
+    font-size: 0.6rem;
+    color: hsl(235, 18%, 26%);
+    font-weight: 400;
+    margin-bottom: 1.1rem;
+}
+.dismiss-button{
+    font-size: 0.7rem;
+    height: 35px;
+}
+
+/* ----------------media queries------------------ */
+@media(max-width:425px){
+    main{
+        display: grid; 
+        border-radius: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: "img"
+                             "info";
+    }
+    .info-container{
+        width: 100%;
+        gap: 20px;
+        padding-top: 2.5rem;
+        padding-bottom: 2.8rem;
+        padding-inline: 1.5rem;
+        grid-area: info;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    .p-1 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    .p-2{
+    }
+    .benefit{
+        font-size: 1rem;
+        align-items: flex-start;
+    }
+    .img-container{
+        width: 100%;
+        grid-area: img;
+    }
+    .ilustration{
+        padding: 0;
+    }
+    input{
+        height:50px ;
+        margin-bottom: 30px;
+    }
+    button{
+        height: 50px;
+    }
+/* --------------------------------------------------- */
+    body{
+        background-color:white;
+       
+    }
+    .message-container{
+        display:none;
+        height: 841px;
+        position: absolute;
+        z-index: 1;
+    }
+    .message{
+        border-radius: 0;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding-inline: 2rem;
+        justify-content:flex-start;
+        padding-top: 150px; 
+    }
+    .icon{
+        width: 60px;
+        margin-bottom: 45px;
+    }
+    h2{
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+    }
+    .paragraph-message{
+        font-size: 0.9rem;
+        margin-bottom: 150px;
+    }
+    .dismiss-button{
+        font-size: 0.9rem;
+        height: 50px;
+        margin-top: 150px;
+    }
+}
